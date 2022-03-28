@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/background"
+        android:scaleType="centerCrop"
+        android:id="@+id/background"
+        app:layout_constraintBottom_toTopOf="@id/placeholder"
+        app:layout_constraintVertical_weight="1"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/placeholder"
+        android:background="#000"
+        app:layout_constraintTop_toBottomOf="@id/background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintVertical_weight="1"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginHorizontal="36dp"
+        android:background="#fff"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.7"
+        android:id="@+id/auth_background"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="USERNAME"
+        android:id="@+id/username_label"
+        app:layout_constraintTop_toTopOf="@id/auth_background"
+        app:layout_constraintLeft_toLeftOf="@id/auth_background"
+        android:layout_margin="32dp"
+        />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/username_input"
+        android:text="andrea@app.com"
+        app:layout_constraintTop_toBottomOf="@id/username_label"
+        app:layout_constraintLeft_toLeftOf="@id/auth_background"
+        app:layout_constraintRight_toRightOf="@id/auth_background"
+        android:layout_marginHorizontal="32dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="PASSWORD"
+        android:id="@+id/pass_label"
+        app:layout_constraintTop_toBottomOf="@id/username_input"
+        app:layout_constraintLeft_toLeftOf="@id/auth_background"
+        android:layout_margin="32dp"
+        />
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/pass_input"
+        android:inputType="textPassword"
+        android:text="password"
+        app:layout_constraintTop_toBottomOf="@id/pass_label"
+        app:layout_constraintLeft_toLeftOf="@id/auth_background"
+        app:layout_constraintRight_toRightOf="@id/auth_background"
+        android:layout_marginHorizontal="32dp"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="#00afff"
+        android:id="@+id/get_started_background"
+        app:layout_constraintLeft_toLeftOf="@id/auth_background"
+        app:layout_constraintRight_toRightOf="@id/auth_background"
+        app:layout_constraintBottom_toBottomOf="@id/auth_background"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/get_started_background"
+        app:layout_constraintTop_toTopOf="@id/get_started_background"
+        app:layout_constraintBottom_toBottomOf="@id/get_started_background"
+        android:backgroundTint="#00afff"
+        android:stateListAnimator="@null"
+        android:translationZ="0dp"
+        android:elevation="0dp"
+        android:text=">"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="@id/get_started_background"
+        app:layout_constraintTop_toTopOf="@id/get_started_background"
+        app:layout_constraintBottom_toBottomOf="@id/get_started_background"
+        android:backgroundTint="#00afff"
+        android:stateListAnimator="@null"
+        android:translationZ="0dp"
+        android:elevation="0dp"
+        android:text="Get Started"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/register"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/auth_background"
+        android:id="@+id/if_not_registered"
+        android:text="Not registered?"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:textColor="@android:color/tab_indicator_text"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toRightOf="@id/if_not_registered"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/auth_background"
+        android:id="@+id/register"
+        android:backgroundTint="#00ffffff"
+        android:textColor="#fff"
+        android:layout_marginLeft="8dp"
+        android:text="Create Account"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#fff"
+        app:layout_constraintLeft_toLeftOf="@id/register"
+        app:layout_constraintRight_toRightOf="@id/register"
+        app:layout_constraintTop_toBottomOf="@id/register"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
